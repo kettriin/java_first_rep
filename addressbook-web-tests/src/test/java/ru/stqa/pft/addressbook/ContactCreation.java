@@ -1,4 +1,4 @@
-package com.example.Creation;
+package ru.stqa.pft.addressbook;
 
 import java.util.concurrent.TimeUnit;
 
