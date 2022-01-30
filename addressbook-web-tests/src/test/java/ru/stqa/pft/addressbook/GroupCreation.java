@@ -16,10 +16,6 @@ public class GroupCreation {
     wd = new ChromeDriver();
     wd.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     js = (JavascriptExecutor) wd;
-  }
-
-  @Test
-  public void testGroupCreation() throws Exception {
     wd.get("http://localhost/addressbook/");
     wd.findElement(By.name("user")).click();
     wd.findElement(By.name("user")).clear();
@@ -27,6 +23,11 @@ public class GroupCreation {
     wd.findElement(By.name("pass")).clear();
     wd.findElement(By.name("pass")).sendKeys("secret");
     wd.findElement(By.id("LoginForm")).submit();
+  }
+
+  @Test
+  public void testGroupCreation() throws Exception {
+
     //ERROR: Caught exception [ERROR: Unsupported command [selectWindow | win_ser_local | ]]
     wd.findElement(By.linkText("groups")).click();
     wd.findElement(By.name("new")).click();
