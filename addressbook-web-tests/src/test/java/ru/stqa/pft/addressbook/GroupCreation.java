@@ -32,7 +32,6 @@ public class GroupCreation {
   @Test
   public void testGroupCreation() throws Exception {
 
-    //ERROR: Caught exception [ERROR: Unsupported command [selectWindow | win_ser_local | ]]
     gotoGroupPage();
     initGroupCreation();
     fillGroupForm(new GroupData("test1", "test2", "test3"));
