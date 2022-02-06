@@ -42,4 +42,12 @@ public class ContactHelper extends HelperBase {
     public void initContactCreation() {
         wd.findElement(By.linkText("add new")).click();
     }
+
+    public void selectContact() {
+        click(By.id("1"));
+    }
+
+    public void deleteSelectedContact() {
+        click(By.xpath("//input[@value='Delete']"));
+    }
 }

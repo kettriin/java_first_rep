@@ -16,4 +16,12 @@ public class NavigationHelper extends HelperBase {
     public void returnHomePage() {
         click(By.linkText("home page"));
     }
+
+    public void waitForAnswer() {
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
 }
