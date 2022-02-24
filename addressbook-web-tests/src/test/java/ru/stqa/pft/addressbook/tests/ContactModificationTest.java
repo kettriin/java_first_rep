@@ -10,7 +10,7 @@ public class ContactModificationTest extends TestBase{
         app.getContactHelper().fillContactForm(new ContactData("Артём", "Александрович", "Бантуков",
                                                                "PlayRix", "г.Киров, ул.Большая Московская, д.11",
                                                                "+79330445566", "art@gallery.com",
-                                                               "1", "April", "1994"));
+                                                               "1", "April", "1994", null), false);
         app.getContactHelper().updateModification();
         app.getNavigationHelper().returnHomePage();
         app.logout();

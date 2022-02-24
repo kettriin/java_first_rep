@@ -13,10 +13,15 @@ public final class ContactData {
     private final String birthday;
     private final String birthmonth;
     private final String birthyear;
+    private String group;
+
+    public String getGroup() {
+        return group;
+    }
 
     public ContactData(String name, String middlename, String lastname, String company, String address,
                        String mobilephonenum, String emailaddress, String birthday, String birthmonth,
-                       String birthyear) {
+                       String birthyear, String group) {
         this.name = name;
         this.middlename = middlename;
         this.lastname = lastname;
@@ -27,6 +32,7 @@ public final class ContactData {
         this.birthday = birthday;
         this.birthmonth = birthmonth;
         this.birthyear = birthyear;
+        this.group = group;
     }
 
     public String name() {

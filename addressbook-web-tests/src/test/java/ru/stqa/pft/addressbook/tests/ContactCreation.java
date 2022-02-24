@@ -11,7 +11,7 @@ public class ContactCreation extends TestBase {
         app.getContactHelper().fillContactForm(new ContactData("Глеб", "Харитонович",
                 "Тропенко", "ZEDcandy", "Новосибирск, пр-кт Левашова, 15",
                 "+79345768822", "tropenko@zcandy.com",
-                "18", "December", "1991"));
+                "18", "December", "1991", "test1"), true);
         app.getContactHelper().approveContactCreation();
         app.getNavigationHelper1().returnHomePage();
         app.logout();

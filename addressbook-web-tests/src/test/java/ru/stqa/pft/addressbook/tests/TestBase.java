@@ -10,7 +10,7 @@ import static org.openqa.selenium.remote.BrowserType.EDGE;
 
 public class TestBase {
 
-    protected final ApplicationManager app = new ApplicationManager(EDGE);
+    protected final ApplicationManager app = new ApplicationManager(CHROME);
 
     @BeforeMethod(alwaysRun = true)
     public void setUp() throws Exception {
