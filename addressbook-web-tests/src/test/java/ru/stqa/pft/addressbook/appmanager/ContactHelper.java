@@ -69,4 +69,27 @@ public class ContactHelper extends HelperBase {
     public void updateModification() {
         click(By.xpath("//div[@id='content']/form/input[22]"));
     }
+
+    public void createContact(ContactData contact) {
+        initContactCreation();
+        fillContactForm(new ContactData("Глеб", "Харитонович",
+                "Тропенко", "ZEDcandy", "Новосибирск, пр-кт Левашова, 15",
+                "+79345768822", "tropenko@zcandy.com",
+                "18", "December", "1991", "test1"), true);
+        approveContactCreation();
+        returnHomePage();
+    }
+
+    public void returnHomePage() {
+        if (isElementPresent(By.id("maintable"))) {
+            return;
+        } else {
+            click(By.linkText("home page"));
+        }
+    }
+
+    public boolean isThereAContact() {
+        return isElementPresent(By.name("selected[]"));
+    }
 }
+
