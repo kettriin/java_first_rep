@@ -42,6 +42,11 @@ public class ContactHelper extends HelperBase {
         }
     }
 
+    public boolean isGroupPresent(String groupname) {
+        click(By.linkText("groups"));
+        return isElementPresent(By.name(groupname));
+    }
+
     private void bday(By period, String valuename) {
         new Select(wd.findElement(period)).selectByVisibleText(valuename);
     }
@@ -91,5 +96,6 @@ public class ContactHelper extends HelperBase {
     public boolean isThereAContact() {
         return isElementPresent(By.name("selected[]"));
     }
+
 }
 
