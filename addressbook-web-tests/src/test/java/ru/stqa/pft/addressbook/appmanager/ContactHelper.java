@@ -91,5 +91,14 @@ public class ContactHelper extends HelperBase {
     public boolean isThereAContact() {
         return isElementPresent(By.name("selected[]"));
     }
+
+    public boolean isThereTheGroup(ContactData contactData) {
+        return isElementPresent(By.name(contactData.getGroup()));
+    }
+
+
+    public String getGroupName(ContactData contactData) {
+        return (contactData.getGroup());
+    }
 }
 
