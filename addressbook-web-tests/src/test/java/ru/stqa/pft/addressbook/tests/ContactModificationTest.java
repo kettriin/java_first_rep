@@ -5,7 +5,7 @@ import ru.stqa.pft.addressbook.model.ContactData;
 
 public class ContactModificationTest extends TestBase{
     @Test
-    public void testContactModification(){
+    public void ContactModificationTest(){
         if (! app.getContactHelper().isThereAContact()) {
             app.getContactHelper().createContact(new ContactData("Глеб", "Харитонович",
                     "Тропенко", "ZEDcandy", "Новосибирск, пр-кт Левашова, 15",
