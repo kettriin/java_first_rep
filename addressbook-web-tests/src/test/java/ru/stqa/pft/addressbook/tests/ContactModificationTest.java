@@ -10,7 +10,7 @@ public class ContactModificationTest extends TestBase{
             app.getContactHelper().createContact(new ContactData("Глеб", "Харитонович",
                     "Тропенко", "ZEDcandy", "Новосибирск, пр-кт Левашова, 15",
                     "+79345768822", "tropenko@zcandy.com",
-                    "18", "December", "1991", "test1"));
+                    "18", "December", "1991", "test11111"));
         }
 
         app.getContactHelper().modifyContact();

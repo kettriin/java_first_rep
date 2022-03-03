@@ -6,6 +6,8 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import ru.stqa.pft.addressbook.model.ContactData;
 
+import java.util.NoSuchElementException;
+
 public class ContactHelper extends HelperBase {
 
     public ContactHelper(WebDriver wd) { super(wd);
@@ -36,7 +38,11 @@ public class ContactHelper extends HelperBase {
         type(By.name("byear"), contactData.birthyear());
 
         if (creation) {
-            new Select(wd.findElement(By.name("new_group"))).selectByVisibleText(contactData.getGroup());
+            try {
+                new Select(wd.findElement(By.name("new_group"))).selectByVisibleText(contactData.getGroup());
+            } catch (NoSuchElementException e) {
+                new Select(wd.findElement(By.name("new_group"))).selectByVisibleText("[none]");
+            }
         } else {
             Assert.assertFalse(isElementPresent(By.name("new_group")));
         }
