@@ -12,7 +12,7 @@ public class ContactCreation extends TestBase {
         ContactData info = new ContactData("Глеб", "Харитонович",
                 "Тропенко", "ZEDcandy", "Новосибирск, пр-кт Левашова, 15",
                 "+79345768822", "tropenko@zcandy.com",
-                "18", "December", "1991", "test990");
+                "18", "December", "1991", "test991");
 
         //Предусловие
         app.getNavigationHelper().gotoGroupPage();

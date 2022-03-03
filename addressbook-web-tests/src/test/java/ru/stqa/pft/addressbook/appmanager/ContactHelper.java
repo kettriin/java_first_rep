@@ -93,7 +93,10 @@ public class ContactHelper extends HelperBase {
     }
 
     public boolean isThereTheGroup(ContactData contactData) {
-        return isElementPresent(By.name(contactData.getGroup()));
+        if(wd.findElement(By.xpath("//html")).getText().contains(contactData.getGroup())){
+            return true;
+        }
+        return false;
     }
 
 
